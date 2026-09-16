@@ -150,7 +150,7 @@ const tables: TableInfo[] = [
   },
   {
     name: 'wilayas',
-    description: '58 provinces algériennes',
+    description: '69 provinces algériennes (mise à jour novembre 2025)',
     category: 'Business',
     columns: [
       { name: 'code', type: 'INTEGER', isPrimary: true },
@@ -192,7 +192,7 @@ export default function DatabaseSchema() {
           </h2>
           <p className="text-lg text-slate-400 max-w-2xl mx-auto">
             28 tables, 14 types ENUM, Row Level Security, et des données optimisées 
-            pour le marché algérien avec les 58 wilayas.
+            pour le marché algérien avec les 69 wilayas (mise à jour novembre 2025).
           </p>
         </div>
 
@@ -207,7 +207,7 @@ export default function DatabaseSchema() {
             <div className="text-xs text-slate-500">ENUM Types</div>
           </div>
           <div className="p-4 rounded-xl bg-slate-800/30 border border-slate-700/40 text-center">
-            <div className="text-2xl font-bold text-white">58</div>
+            <div className="text-2xl font-bold text-white">69</div>
             <div className="text-xs text-slate-500">Wilayas</div>
           </div>
           <div className="p-4 rounded-xl bg-slate-800/30 border border-slate-700/40 text-center">

@@ -33,7 +33,7 @@ psql -U doc_oto -d doc_oto -f database/seed.sql
 
 # 6. Vérifier l'installation
 psql -U doc_oto -d doc_oto -c "SELECT COUNT(*) FROM wilayas;"
-# Résultat attendu : 58
+# Résultat attendu : 69
 ```
 
 ### Option 2 : Supabase (Recommandé pour production)
@@ -260,9 +260,9 @@ Utilisateur démo:
 ### Vérifier les données
 
 ```sql
--- Compter les enregistrements
+-- Compter les enregistrements (69 wilayas attendues)
 SELECT 
-  (SELECT COUNT(*) FROM wilayas) as wilayas,
+  (SELECT COUNT(*) FROM wilayas) as wilayas,  -- 69
   (SELECT COUNT(*) FROM users) as users,
   (SELECT COUNT(*) FROM vehicles) as vehicles,
   (SELECT COUNT(*) FROM vendors) as vendors,

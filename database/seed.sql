@@ -4,7 +4,7 @@
 -- ============================================================================
 
 -- ============================================================================
--- WILAYAS (58 Algerian provinces since 2019)
+-- WILAYAS (69 Algerian provinces - 58 since 2019 + 11 new in November 2025)
 -- ============================================================================
 
 INSERT INTO wilayas (code, name_fr, name_ar, name_en) VALUES
@@ -65,7 +65,19 @@ INSERT INTO wilayas (code, name_fr, name_ar, name_en) VALUES
 (55, 'Touggourt', 'تقرت', 'Touggourt'),
 (56, 'Djanet', 'جانت', 'Djanet'),
 (57, 'In Salah', 'عين صالح', 'In Salah'),
-(58, 'In Guezzam', 'عين قزام', 'In Guezzam');
+(58, 'In Guezzam', 'عين قزام', 'In Guezzam'),
+-- 11 nouvelles wilayas créées en novembre 2025
+(59, 'Aflou', 'أفلو', 'Aflou'),
+(60, 'El Abiodh Sidi Cheikh', 'البيضح سيدي الشيخ', 'El Abiodh Sidi Cheikh'),
+(61, 'El Aricha', 'العريشة', 'El Aricha'),
+(62, 'El Kantara', 'القنطرة', 'El Kantara'),
+(63, 'Barika', 'بريكة', 'Barika'),
+(64, 'Boussaâda', 'بوسعادة', 'Boussada'),
+(65, 'Bir El Ater', 'بئر العاتر', 'Bir El Ater'),
+(66, 'Ksar Chellala', 'قصر الشلالة', 'Ksar Chellala'),
+(67, 'Messaad', 'مسعد', 'Messaad'),
+(68, 'Aïn Oussera', 'عين وسارة', 'Ain Oussera'),
+(69, 'Ksar El Boukhari', 'قصر البخاري', 'Ksar El Boukhari');
 
 -- ============================================================================
 -- DEFAULT ADMIN USER (password: Admin@2026 - CHANGE IN PRODUCTION!)

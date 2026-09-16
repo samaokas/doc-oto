@@ -54,7 +54,7 @@ export default function Hero() {
             </div>
             <div className="flex flex-col items-center p-5 rounded-xl bg-slate-800/40 border border-slate-700/40">
               <Shield className="w-6 h-6 text-blue-400 mb-2" />
-              <span className="text-2xl font-bold text-white">48 Wilayas</span>
+              <span className="text-2xl font-bold text-white">69 Wilayas</span>
               <span className="text-sm text-slate-500">Nationwide Coverage</span>
             </div>
             <div className="flex flex-col items-center p-5 rounded-xl bg-slate-800/40 border border-slate-700/40">

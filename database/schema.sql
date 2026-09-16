@@ -108,7 +108,7 @@ CREATE TABLE subscriptions (
 CREATE INDEX idx_subscriptions_user_id ON subscriptions(user_id);
 CREATE INDEX idx_subscriptions_status ON subscriptions(status);
 
--- Wilayas (Algerian provinces - 58 since 2019, previously 48)
+-- Wilayas (Algerian provinces - 69 since November 2025, 58 since 2019, previously 48)
 CREATE TABLE wilayas (
     code INTEGER PRIMARY KEY,
     name_fr VARCHAR(100) NOT NULL,
@@ -907,4 +907,4 @@ COMMENT ON TABLE tires IS 'Tire tracking with position and wear';
 COMMENT ON TABLE fuel_logs IS 'Fuel refill records with consumption calculation';
 COMMENT ON TABLE expenses IS 'General vehicle expenses';
 COMMENT ON TABLE vendors IS 'Algerian vendor directory';
-COMMENT ON TABLE wilayas IS 'Algerian provinces (58 wilayas)';
+COMMENT ON TABLE wilayas IS 'Algerian provinces (69 wilayas - updated November 2025)';

@@ -81,7 +81,7 @@ Base de données PostgreSQL complète pour la plateforme Doc-OTO de gestion de v
 |-------|-------------|
 | `users` | Utilisateurs avec rôles (admin, owner, fleet) |
 | `subscriptions` | Abonnements et limites |
-| `wilayas` | 58 provinces algériennes |
+| `wilayas` | 69 provinces algériennes (mise à jour novembre 2025) |
 | `vehicles` | Véhicules (cars, buses, trucks) |
 
 ### Maintenance Tables (6)
@@ -109,6 +109,8 @@ Base de données PostgreSQL complète pour la plateforme Doc-OTO de gestion de v
 | `import_jobs` | Import de données (JSON/CSV/Excel) |
 | `payments` | Historique des paiements |
 | `audit_logs` | Journal d'audit complet |
+
+**Note** : L'Algérie compte désormais **69 wilayas** depuis novembre 2025, avec la création de 11 nouvelles wilayas (Aflou, El Abiodh Sidi Cheikh, El Aricha, El Kantara, Barika, Boussaâda, Bir El Ater, Ksar Chellala, Messaad, Aïn Oussera, Ksar El Boukhari).
 
 ---
 
@@ -174,7 +176,10 @@ psql -U postgres -p 54322 -d postgres -f database/seed.sql
 
 Le fichier `seed.sql` contient :
 
-- ✅ **58 wilayas** algériennes (FR/AR/EN)
+- ✅ **69 wilayas** algériennes (FR/AR/EN) - incluant les 11 nouvelles wilayas créées en novembre 2025 :
+  - 59: Aflou, 60: El Abiodh Sidi Cheikh, 61: El Aricha, 62: El Kantara
+  - 63: Barika, 64: Boussaâda, 65: Bir El Ater, 66: Ksar Chellala
+  - 67: Messaad, 68: Aïn Oussera, 69: Ksar El Boukhari
 - ✅ **10 vendors** de démonstration (garages, pièces, pneus)
 - ✅ **1 utilisateur admin** (`admin@doc-oto.dz`)
 - ✅ **1 utilisateur démo** (`demo@doc-oto.dz`)
