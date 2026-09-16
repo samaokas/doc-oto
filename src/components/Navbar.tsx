@@ -3,9 +3,10 @@ import { Menu, X } from 'lucide-react';
 interface NavbarProps {
   mobileMenuOpen: boolean;
   setMobileMenuOpen: (open: boolean) => void;
+  onSignInClick: () => void;
 }
 
-export default function Navbar({ mobileMenuOpen, setMobileMenuOpen }: NavbarProps) {
+export default function Navbar({ mobileMenuOpen, setMobileMenuOpen, onSignInClick }: NavbarProps) {
   const navLinks = [
     { label: 'Features', href: '#features' },
     { label: 'Dashboard', href: '#dashboard' },
@@ -45,10 +46,16 @@ export default function Navbar({ mobileMenuOpen, setMobileMenuOpen }: NavbarProp
 
           {/* CTA */}
           <div className="hidden md:flex items-center gap-3">
-            <button className="px-4 py-2 text-sm text-slate-400 hover:text-white transition-colors">
+            <button 
+              onClick={onSignInClick}
+              className="px-4 py-2 text-sm text-slate-400 hover:text-white transition-colors"
+            >
               Sign In
             </button>
-            <button className="px-4 py-2 text-sm bg-blue-600 rounded-lg font-medium hover:bg-blue-500 transition-all shadow-lg shadow-blue-600/20">
+            <button 
+              onClick={onSignInClick}
+              className="px-4 py-2 text-sm bg-blue-600 rounded-lg font-medium hover:bg-blue-500 transition-all shadow-lg shadow-blue-600/20 text-white"
+            >
               Get Started
             </button>
           </div>
@@ -78,10 +85,16 @@ export default function Navbar({ mobileMenuOpen, setMobileMenuOpen }: NavbarProp
               </a>
             ))}
             <div className="pt-3 border-t border-slate-800 flex gap-3">
-              <button className="flex-1 px-4 py-2 text-sm text-slate-400 border border-slate-700 rounded-lg">
+              <button 
+                onClick={() => { setMobileMenuOpen(false); onSignInClick(); }}
+                className="flex-1 px-4 py-2 text-sm text-slate-400 border border-slate-700 rounded-lg hover:text-white transition-colors"
+              >
                 Sign In
               </button>
-              <button className="flex-1 px-4 py-2 text-sm bg-blue-600 rounded-lg font-medium text-white">
+              <button 
+                onClick={() => { setMobileMenuOpen(false); onSignInClick(); }}
+                className="flex-1 px-4 py-2 text-sm bg-blue-600 rounded-lg font-medium text-white hover:bg-blue-500 transition-colors"
+              >
                 Get Started
               </button>
             </div>
