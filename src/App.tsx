@@ -6,6 +6,7 @@ import DashboardPreview from './components/DashboardPreview';
 import Roles from './components/Roles';
 import Pricing from './components/Pricing';
 import Specs from './components/Specs';
+import DatabaseSchema from './components/DatabaseSchema';
 import Footer from './components/Footer';
 import AuthModal from './components/AuthModal';
 
@@ -25,6 +26,7 @@ export default function App() {
       <DashboardPreview />
       <Roles />
       <Pricing />
+      <DatabaseSchema />
       <Specs />
       <Footer />
       <AuthModal 
