@@ -1,4 +1,4 @@
-import { Menu, X, Car } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 interface NavbarProps {
   mobileMenuOpen: boolean;
@@ -15,15 +15,17 @@ export default function Navbar({ mobileMenuOpen, setMobileMenuOpen }: NavbarProp
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800/50">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-950/90 backdrop-blur-xl border-b border-slate-800/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center gap-2">
-            <div className="w-9 h-9 bg-gradient-to-br from-emerald-400 to-cyan-500 rounded-lg flex items-center justify-center">
-              <Car className="w-5 h-5 text-white" />
-            </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
+          <div className="flex items-center gap-3">
+            <img 
+              src="https://image.qwenlm.ai/generated-images/5dd18a8a-5139-4320-b175-d560d9ddd7d0/_result.png" 
+              alt="Doc-OTO Logo" 
+              className="w-10 h-10 rounded-lg"
+            />
+            <span className="text-xl font-bold text-white">
               Doc-OTO
             </span>
           </div>
@@ -34,7 +36,7 @@ export default function Navbar({ mobileMenuOpen, setMobileMenuOpen }: NavbarProp
               <a
                 key={link.label}
                 href={link.href}
-                className="text-sm text-slate-300 hover:text-emerald-400 transition-colors duration-200"
+                className="text-sm text-slate-400 hover:text-white transition-colors duration-200"
               >
                 {link.label}
               </a>
@@ -43,10 +45,10 @@ export default function Navbar({ mobileMenuOpen, setMobileMenuOpen }: NavbarProp
 
           {/* CTA */}
           <div className="hidden md:flex items-center gap-3">
-            <button className="px-4 py-2 text-sm text-slate-300 hover:text-white transition-colors">
+            <button className="px-4 py-2 text-sm text-slate-400 hover:text-white transition-colors">
               Sign In
             </button>
-            <button className="px-4 py-2 text-sm bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-lg font-medium hover:from-emerald-400 hover:to-cyan-400 transition-all shadow-lg shadow-emerald-500/20">
+            <button className="px-4 py-2 text-sm bg-blue-600 rounded-lg font-medium hover:bg-blue-500 transition-all shadow-lg shadow-blue-600/20">
               Get Started
             </button>
           </div>
@@ -69,17 +71,17 @@ export default function Navbar({ mobileMenuOpen, setMobileMenuOpen }: NavbarProp
               <a
                 key={link.label}
                 href={link.href}
-                className="block text-slate-300 hover:text-emerald-400 py-2"
+                className="block text-slate-400 hover:text-white py-2"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {link.label}
               </a>
             ))}
             <div className="pt-3 border-t border-slate-800 flex gap-3">
-              <button className="flex-1 px-4 py-2 text-sm text-slate-300 border border-slate-700 rounded-lg">
+              <button className="flex-1 px-4 py-2 text-sm text-slate-400 border border-slate-700 rounded-lg">
                 Sign In
               </button>
-              <button className="flex-1 px-4 py-2 text-sm bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-lg font-medium">
+              <button className="flex-1 px-4 py-2 text-sm bg-blue-600 rounded-lg font-medium text-white">
                 Get Started
               </button>
             </div>

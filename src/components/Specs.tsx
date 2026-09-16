@@ -1,4 +1,4 @@
-import { Database, Globe, Lock, Smartphone, Server, Code } from 'lucide-react';
+import { Database, Globe, Lock, Server, Code } from 'lucide-react';
 
 const techSpecs = [
   {
@@ -62,12 +62,12 @@ export default function Specs() {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="inline-block px-3 py-1 text-sm text-teal-400 bg-teal-500/10 border border-teal-500/20 rounded-full mb-4">
+          <span className="inline-block px-3 py-1 text-sm text-blue-400 bg-blue-500/10 border border-blue-500/20 rounded-full mb-4">
             Technical Specifications
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 tracking-tight">
             Built with
-            <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent"> Modern Technology</span>
+            <span className="text-blue-400"> Modern Technology</span>
           </h2>
           <p className="text-lg text-slate-400 max-w-2xl mx-auto">
             Enterprise-grade infrastructure designed for reliability, security, and scalability 
@@ -76,20 +76,20 @@ export default function Specs() {
         </div>
 
         {/* Tech Specs Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
           {techSpecs.map((section, index) => (
-            <div key={index} className="p-6 rounded-2xl bg-slate-800/30 border border-slate-700/50">
+            <div key={index} className="p-6 rounded-2xl bg-slate-800/30 border border-slate-700/40">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-lg bg-teal-500/20 flex items-center justify-center">
-                  <section.icon className="w-5 h-5 text-teal-400" />
+                <div className="w-10 h-10 rounded-lg bg-blue-600/15 border border-blue-500/20 flex items-center justify-center">
+                  <section.icon className="w-5 h-5 text-blue-400" />
                 </div>
                 <h3 className="text-lg font-semibold text-white">{section.category}</h3>
               </div>
               <div className="space-y-3">
                 {section.specs.map((spec, i) => (
                   <div key={i} className="flex justify-between items-start gap-4">
-                    <span className="text-sm text-slate-400 whitespace-nowrap">{spec.label}</span>
-                    <span className="text-sm text-slate-200 text-right">{spec.value}</span>
+                    <span className="text-sm text-slate-500 whitespace-nowrap">{spec.label}</span>
+                    <span className="text-sm text-slate-300 text-right">{spec.value}</span>
                   </div>
                 ))}
               </div>
@@ -98,20 +98,20 @@ export default function Specs() {
         </div>
 
         {/* Vehicle Types & Maintenance Categories */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Vehicle Types */}
-          <div className="p-6 rounded-2xl bg-slate-800/30 border border-slate-700/50">
+          <div className="p-6 rounded-2xl bg-slate-800/30 border border-slate-700/40">
             <h3 className="text-lg font-semibold text-white mb-6 flex items-center gap-2">
-              <Globe className="w-5 h-5 text-emerald-400" />
+              <Globe className="w-5 h-5 text-blue-400" />
               Supported Vehicle Types
             </h3>
-            <div className="space-y-4">
+            <div className="space-y-3">
               {vehicleTypes.map((vehicle, i) => (
                 <div key={i} className="flex items-center gap-4 p-3 rounded-xl bg-slate-900/50 border border-slate-700/30">
                   <span className="text-3xl">{vehicle.icon}</span>
                   <div>
                     <p className="font-medium text-white">{vehicle.type}</p>
-                    <p className="text-sm text-slate-400">{vehicle.count}</p>
+                    <p className="text-sm text-slate-500">{vehicle.count}</p>
                   </div>
                 </div>
               ))}
@@ -119,15 +119,15 @@ export default function Specs() {
           </div>
 
           {/* Maintenance Categories */}
-          <div className="p-6 rounded-2xl bg-slate-800/30 border border-slate-700/50">
+          <div className="p-6 rounded-2xl bg-slate-800/30 border border-slate-700/40">
             <h3 className="text-lg font-semibold text-white mb-6 flex items-center gap-2">
-              <Code className="w-5 h-5 text-cyan-400" />
+              <Code className="w-5 h-5 text-blue-400" />
               Maintenance Categories
             </h3>
             <div className="grid grid-cols-2 gap-3">
               {maintenanceCategories.map((cat, i) => (
                 <div key={i} className="flex items-center gap-2 p-2.5 rounded-lg bg-slate-900/50 border border-slate-700/30">
-                  <div className="w-2 h-2 rounded-full bg-gradient-to-r from-emerald-400 to-cyan-400" />
+                  <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
                   <span className="text-sm text-slate-300">{cat}</span>
                 </div>
               ))}
@@ -136,7 +136,7 @@ export default function Specs() {
         </div>
 
         {/* Data Import Section */}
-        <div className="mt-8 p-6 rounded-2xl bg-gradient-to-r from-emerald-500/10 to-cyan-500/10 border border-emerald-500/20">
+        <div className="mt-8 p-6 rounded-2xl bg-slate-800/30 border border-slate-700/40">
           <div className="flex flex-col md:flex-row items-center gap-6">
             <div className="flex-1">
               <h3 className="text-lg font-semibold text-white mb-2">Seamless Data Migration</h3>
@@ -146,17 +146,17 @@ export default function Specs() {
               </p>
             </div>
             <div className="flex gap-3">
-              <div className="px-4 py-2 rounded-lg bg-slate-900/50 border border-slate-700/50 text-center">
-                <span className="text-xs text-slate-400 block">Format</span>
-                <span className="text-sm font-semibold text-emerald-400">JSON</span>
+              <div className="px-4 py-2 rounded-lg bg-slate-900/50 border border-slate-700/30 text-center">
+                <span className="text-xs text-slate-500 block">Format</span>
+                <span className="text-sm font-semibold text-blue-400">JSON</span>
               </div>
-              <div className="px-4 py-2 rounded-lg bg-slate-900/50 border border-slate-700/50 text-center">
-                <span className="text-xs text-slate-400 block">Format</span>
-                <span className="text-sm font-semibold text-cyan-400">CSV</span>
+              <div className="px-4 py-2 rounded-lg bg-slate-900/50 border border-slate-700/30 text-center">
+                <span className="text-xs text-slate-500 block">Format</span>
+                <span className="text-sm font-semibold text-blue-400">CSV</span>
               </div>
-              <div className="px-4 py-2 rounded-lg bg-slate-900/50 border border-slate-700/50 text-center">
-                <span className="text-xs text-slate-400 block">Format</span>
-                <span className="text-sm font-semibold text-purple-400">Excel</span>
+              <div className="px-4 py-2 rounded-lg bg-slate-900/50 border border-slate-700/30 text-center">
+                <span className="text-xs text-slate-500 block">Format</span>
+                <span className="text-sm font-semibold text-blue-400">Excel</span>
               </div>
             </div>
           </div>
