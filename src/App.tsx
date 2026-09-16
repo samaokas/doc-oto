@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { AuthProvider } from './contexts/AuthContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Features from './components/Features';
@@ -15,24 +16,26 @@ export default function App() {
   const [authModalOpen, setAuthModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-slate-950 text-white font-sans">
-      <Navbar 
-        mobileMenuOpen={mobileMenuOpen} 
-        setMobileMenuOpen={setMobileMenuOpen}
-        onSignInClick={() => setAuthModalOpen(true)}
-      />
-      <Hero />
-      <Features />
-      <DashboardPreview />
-      <Roles />
-      <Pricing />
-      <DatabaseSchema />
-      <Specs />
-      <Footer />
-      <AuthModal 
-        isOpen={authModalOpen} 
-        onClose={() => setAuthModalOpen(false)} 
-      />
-    </div>
+    <AuthProvider>
+      <div className="min-h-screen bg-slate-950 text-white font-sans">
+        <Navbar 
+          mobileMenuOpen={mobileMenuOpen} 
+          setMobileMenuOpen={setMobileMenuOpen}
+          onSignInClick={() => setAuthModalOpen(true)}
+        />
+        <Hero />
+        <Features />
+        <DashboardPreview />
+        <Roles />
+        <Pricing />
+        <DatabaseSchema />
+        <Specs />
+        <Footer />
+        <AuthModal 
+          isOpen={authModalOpen} 
+          onClose={() => setAuthModalOpen(false)} 
+        />
+      </div>
+    </AuthProvider>
   );
 }
